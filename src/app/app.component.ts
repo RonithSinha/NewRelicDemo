@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var NewRelic;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    console.log('before new relic init');
+    NewRelic.initialize();
+    console.log('after new relic init');
+  }
 }
