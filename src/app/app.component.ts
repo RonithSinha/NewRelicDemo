@@ -9,7 +9,11 @@ declare var NewRelic;
 export class AppComponent {
   constructor() {
     console.log('before new relic init');
-    NewRelic.initialize();
+    try {
+      NewRelic.initialize();
+    } catch (error) {
+      console.log(error);
+    }
     console.log('after new relic init');
   }
 }
