@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-declare var NewRelic;
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,39 +7,9 @@ declare var NewRelic;
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {
-    console.log('before new relic init');
-
-    try {
-      NewRelic.initialize();
-    } catch (error) {
-      console.log(error);
-    }
-
-    try {
-      NewRelic.enableCrashReporting(true);
-    } catch (error) {
-      console.log(error);
-    }
-
-    try {
-      NewRelic.setApplicationVersion('2.3.32');
-    } catch (error) {
-      console.log(error);
-    }
-
-    try {
-      NewRelic.recordMetricWithName('metric1', 'category1');
-    } catch (error) {
-      console.log(error);
-    }
-
-    try {
-      NewRelic.crashNow();
-    } catch (error) {
-      console.log(error);
-    }
-
-    console.log('after new relic init');
+  constructor(private http: HttpClient) {
+    this.http.get('https://youtube.com/').subscribe((res) => {
+      console.log('Youtube Response: ', res);
+    });
   }
 }
