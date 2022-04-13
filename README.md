@@ -20,6 +20,7 @@ NRQL for querying page data:
 }
 
 New Relic Curl command: 
+
 curl https://api.newrelic.com/graphql \
   -H 'Content-Type: application/json' \
   -H 'API-Key: NRAK-LYA6PNNSO08IYB0074A1C5FTSNK' \
