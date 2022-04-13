@@ -23,8 +23,7 @@ NRQL for querying url data:
 New Relic Curl command: 
 
 
-********Important********
-[Note: Copy the following command only in Raw Mode]
+# Important: Copy the following command only in Raw Mode
 
 
 curl https://api.newrelic.com/graphql \
