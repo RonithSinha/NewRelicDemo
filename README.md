@@ -22,7 +22,9 @@ NRQL for querying url data:
 
 New Relic Curl command: 
 
+"""
 curl https://api.newrelic.com/graphql \
   -H 'Content-Type: application/json' \
   -H 'API-Key: NRAK-LYA6PNNSO08IYB0074A1C5FTSNK' \
   --data-binary '{"query":"{\n  actor {\naccount(id: 3441090) {\nnrql(query: \"SELECT * FROM NewRelicUrlData SINCE 1648924200 UNTIL 1649788200\") {\n        results\n      }\n    }\n  }\n}\n", "variables":""}'
+"""
