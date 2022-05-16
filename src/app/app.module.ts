@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NewRelicInterceptor } from 'src/providers/interceptor/newrelic-interceptor';
+//import { NewRelicInterceptor } from 'src/providers/interceptor/newrelic-interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +18,7 @@ import { NewRelicInterceptor } from 'src/providers/interceptor/newrelic-intercep
     HttpClientModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NewRelicInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: NewRelicInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
